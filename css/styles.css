@@ -121,46 +121,62 @@ header{
     }
 
     /*about.html*/
-    .contenedorAbout{
-        background-color:rgba(0, 0,0, 0.85);
-        color:white;
-        padding-right:30%;
-        padding-left:30%;
-        margin-top:300px;
-        bottom:0;
-        opacity:0.5;
-        width:100%;
-        height:800px;
+    #about{
+        height:1600px;
+        
     }
     .about{
         background-image:url("/img/helloquence-5fNmWej4tAA-unsplash.jpg");
         height:800px;
         background-size: cover;
+        position:relative
+    }
+    .contenedorAbout{
+        background-color:rgba(0, 0,0, 0.85);
+        color:white;
+        padding-right:20%;
+        padding-left:20%;
+        opacity:0;
+        height:400px;
+        width:100%;
+        position:absolute;
+        bottom:0;
+        font-size:1.5em;
+        
     }
 
-    .hideme2
-    {
-        opacity:0;
-        
-        
+    .contenedorAbout h2{
+        font-size:1.5em;
+        text-align:center;
         
     }
 
     @media only screen and (max-device-width: 1360px) {
+        .about{
+            background-size:cover;
+        }
         .contenedorAbout {
-          margin-left: 10%;
-          margin-right: 10%;
+          overflow:scroll;
+          font-size:1em;
+          padding-right:10%;
+          padding-left:10%;
+          line-height:5px;
+
         }
       }
-    
 
-    .hideme2 p{
-        text-align: center;
-        font-size: 1.2em;
-        color: #2c2c2c;
-       
-        
-    }
+      #botones{
+          width:100%;
+          position:absolute;
+          bottom:0;
+          text-align:center;
+      }
+
+      .container{
+          position:absolute;
+          display:none;
+      }
+    
 
 
 /*Footer*/
