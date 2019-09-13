@@ -43,21 +43,20 @@ $(document).ready(function() {
             /* If the object is completely visible in the window, fade it it */
             if( bottom_of_window > bottom_of_object ){
                 
-                $(this).animate({'opacity':'0.5'},1500);
+                $(this).animate({'opacity':'1'},1500);
                     
             }
             
         });
         
-    
+        
     });
     
 });
 
 
-var contenedor = document.getElementById("contenedor");
+var contenedor = document.getElementById("contenedorA");
 
 function mostrar(){
-    console.log("llegue");
     contenedor.style.display = 'block';
 }
