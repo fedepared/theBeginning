@@ -13,6 +13,8 @@ $(document).ready(function() {
             var bottom_of_object = $(this).position().top + $(this).outerHeight();
             var bottom_of_window = $(window).scrollTop() + $(window).height();
             
+
+
             /* If the object is completely visible in the window, fade it it */
             if( bottom_of_window > bottom_of_object ){
                 
@@ -34,21 +36,20 @@ $(document).ready(function() {
             }
             
         }); 
-
-        $('.contenedorAbout2').each( function(i){
-            
-            var bottom_of_object = $(this).position().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            
-            /* If the object is completely visible in the window, fade it it */
-            if( bottom_of_window > bottom_of_object ){
-                
-                $(this).animate({'opacity':'1'},1500);
-                    
-            }
-            
-        });
         
+        $('.contenedorAbout2').each( function(i){
+                
+            var bottom_of_object2 = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window2 = $(window).scrollTop() + $(window).height();
+                                
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window2 > bottom_of_object2 ){
+            
+                $(this).animate({'opacity':'1'},1500);
+                            
+                }
+                    
+            });
         
     });
     
