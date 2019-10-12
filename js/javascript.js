@@ -56,8 +56,9 @@ $(document).ready(function() {
 });
 
 
-var contenedor = document.getElementById("contenedorA");
+var contenedor = document.querySelector("#contenedorA");
+var main = document.querySelector("#about");
 
 function mostrar(){
-    contenedor.style.display = 'block';
+    contenedor.style.display = 'block';    
 }
