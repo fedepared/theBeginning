@@ -62,3 +62,12 @@ var main = document.querySelector("#about");
 function mostrar(){
     contenedor.style.display = 'block';    
 }
+
+let x = window.matchMedia("(max-width: 320px)")
+
+if (x.matches){
+    let arrayBot=document.getElementsByClassName("btn");
+    for(let i=0;i<arrayBot.length;i++){
+        arrayBot[i].className="btn btn-outline-secondary btn-sm";
+    }
+}

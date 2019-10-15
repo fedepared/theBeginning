@@ -11,12 +11,12 @@ body{
     height:100%;
     width:100%;
 }
-
-main{
-    /* overflow:auto; */
+@media only screen and (max-device-width: 360px) {
+    main{
+        font-size:x-small;
     
+    }
 }
-
 /*Header*/
 
 header{
