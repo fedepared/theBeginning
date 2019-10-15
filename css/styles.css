@@ -3,9 +3,6 @@
     font-family: "Cinzel", sans-serif;
 }
 
-html{
-
-}
 
 body{
     height:100%;
@@ -184,11 +181,6 @@ header{
             color:black;
       }
 
-      .container{
-          position:absolute;
-          display:none;
-      }
-
       #contenedorA{
             display:none;
       }
@@ -257,4 +249,32 @@ header{
 }
 
  
+
+/*Contact page*/
+#img{
+    background-image:url("/img/lady-justice-2388500_1920.jpg");
+        height:800px;
+        background-size: cover;
+        position:relative;
+        padding:0;
+        margin:0;
+}
+
+#sendMsg{
+    margin-left:25%;
+}
+
+
+#contactFoot{
+ height:10%;
+
+}
+
+@media only screen and (max-device-width: 667px) {
+
+    #contactFoot{
+        height:12%;
+       
+       }
+}
 
