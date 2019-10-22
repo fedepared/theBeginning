@@ -71,3 +71,21 @@ if (x.matches){
         arrayBot[i].className="btn btn-outline-secondary btn-sm";
     }
 }
+
+//obtención de datos
+
+let peticion = new XMLHttpRequest();
+document.querySelector("#btnEnvio").addEventListener("click",function(){
+    peticion.open("get","envio.php",true);
+    peticion.send();
+    peticion.addEventListener("load",function(){
+        if(this.responseText){
+            document.querySelector("#ok").style.display="block";
+        }
+        else{
+            document.querySelector("#err").style.display="block";
+        }
+        
+    })
+})
+

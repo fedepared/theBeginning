@@ -4,24 +4,22 @@ $name = $_POST["name"];
 $email = $_POST["email"];
 $phone = $_POST["phone"];
 $message = $_POST["message"];
+$envio = false;
 
 // Datos del email
 $para = "amrebottaro@estudiorebottaro.com.ar";
 $titulo  = "consulta desde pagina web";
 $header = "From: " . $email;
-$msjCorreo = "Nombre:" . $name . "\n Telefono: " . $phone . "\n E-Mail: " . $email . "\n Mensaje: \n" . $message;
+$msjCorreo = "Nombre: " . $name . "\n\nTelefono: " . $phone . "\n\nE-Mail: " . $email . "\n\nMensaje: \n\n\t\t" . $message;
 
 if(mail($para,$titulo,$msjCorreo,$header)){
-    echo "<script language='javascript'>
-    alert('Mensaje Enviado')</script>";
+    header("Location:contact.html");
+    echo json_encode(true);   
+    exit;
 }else{
-    echo "Fallo el envio";
+    header("Location:contact.html");
+    echo json_encode(false);
+    exit;
 }
-
-
-
-
-
-
 
 ?>

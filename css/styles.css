@@ -278,3 +278,13 @@ header{
        }
 }
 
+.msj{
+    display:none;
+
+}
+
+.mb-0{
+    text-align:right;
+    font-size:small;
+}
+
