@@ -279,12 +279,14 @@ header{
 }
 
 .msj{
-    display:none;
-
+    display: none;
+    margin-left:auto;
+    margin-right:auto;
 }
+
+
 
 .mb-0{
     text-align:right;
     font-size:small;
 }
-

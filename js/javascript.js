@@ -74,18 +74,31 @@ if (x.matches){
 
 //obtención de datos
 
+
 let peticion = new XMLHttpRequest();
-document.querySelector("#btnEnvio").addEventListener("click",function(){
-    peticion.open("get","envio.php",true);
-    peticion.send();
+document.querySelector("#frmContact").addEventListener("submit",function(evt){
+    evt.preventDefault();
+    let name=document.querySelector("#name").value; 
+    let email=document.querySelector("#email").value;
+    let phone=document.querySelector("#phone").value;
+    let message=document.querySelector("#message").value;
+    let data = new FormData();
+    data.append("name", name );
+    data.append("email", email);
+    data.append("phone", phone);
+    data.append("message", message);
+    peticion.open("POST","envio.php");
+    peticion.send(data);
+    
     peticion.addEventListener("load",function(){
-        if(this.responseText){
+        console.log(peticion.response);
+        if(peticion.response == 1){
             document.querySelector("#ok").style.display="block";
+            document.querySelector("#frmContact").reset();
         }
         else{
             document.querySelector("#err").style.display="block";
         }
-        
     })
 })
 
